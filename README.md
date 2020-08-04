@@ -94,7 +94,19 @@ There is also a handy tool which will upload entire directories to your S3 bucke
                 'verify' => '../ss-easy-s3/cacert.pem'
             ]
         );
-
+        
+        or 
+        
+        $array = array(
+            'version' => ...,
+            'region' => ...,
+            'credentials' => ...,
+            // add these lines
+            'scheme'  => 'https',
+            'http'    => [
+                'verify' => false
+            ]
+        );
 
 4. Refresh the page and test uploading image (in my case using `Files` page in CMS Admin)
 
